@@ -28,7 +28,9 @@ if ($result->num_rows > 0) {
         $data[]=$row;
    }
    var_dump($data);
-   
+
 } else {
     echo"0 resultados";
 }
+
+$conn->close();

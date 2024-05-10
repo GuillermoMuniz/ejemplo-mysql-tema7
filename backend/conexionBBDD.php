@@ -27,6 +27,7 @@ if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         $data[]=$row;
    }
+   //Es como imprimir por pantalla
    var_dump($data);
 
 } else {

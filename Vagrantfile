@@ -5,6 +5,8 @@ Vagrant.configure("2") do |config|
   config.vm.network "private_network", ip: "192.168.50.55"
   config.vm.synced_folder ".", "/ejemplo_inicial_mysql"
   config.vm.provision "shell", inline: <<-SHELL
+    #Instalacion de los binarios de php y el driver de conexión a la BBDD
+    sudo apt-get install -y php php-mysqli
   
     #Generar archivo SQL con los registros de empleados/as
     echo "-- Insertar datos de ejemplo en la tabla 'empleados'" > /home/vagrant/datos_empleados.sql

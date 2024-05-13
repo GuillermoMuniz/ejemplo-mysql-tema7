@@ -13,6 +13,8 @@ $conn = new mysqli($servername, $username, $password, $database);
     if ($conn->connect_error) {
         die("Conexión fallida". $conn->connect_error);
     }
+// Considerar las ñ y las tildes
+ $conn->set_charset("utf8mb4");
 
 // Consulta SQL para obtener los datos
 $sql = "SELECT * FROM empleados";

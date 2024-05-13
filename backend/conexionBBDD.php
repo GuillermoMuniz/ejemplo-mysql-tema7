@@ -10,11 +10,11 @@ $database = "gestion_empleados";
 $conn = new mysqli($servername, $username, $password, $database);
 
 // Comprobar la conexión
-    if ($conn->connect_error) {
-        die("Conexión fallida". $conn->connect_error);
-    }
+if ($conn->connect_error) {
+    die("Conexión fallida" . $conn->connect_error);
+}
 // Considerar las ñ y las tildes
- $conn->set_charset("utf8mb4");
+$conn->set_charset("utf8mb4");
 
 // Consulta SQL para obtener los datos
 $sql = "SELECT * FROM empleados";
@@ -24,16 +24,17 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Crer un array para almacenar los datos
-    $data= array();
+    $data = array();
     // Recorrer los resultados y almacenarlos en el array
     while ($row = $result->fetch_assoc()) {
-        $data[]=$row;
-   }
-   //Es como imprimir por pantalla
-   var_dump($data);
+        $data[] = $row;
+    }
+    //Para json
+    echo json_encode($data);
+
 
 } else {
-    echo"0 resultados";
+    echo "0 resultados";
 }
 
 $conn->close();

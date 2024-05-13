@@ -5,4 +5,6 @@
 
 2. Necesitamos un servicio/servidor web : Apache / Nginx (`sudo apt install -y nginx ` o `sudo apt install -y apache2`).
 
-3. Diferenciamos entre el FRONTEND y BACKEND de la página web.
+3. Instalación de los binarios de PHP y el driver de conexión a la base de datos. 
+
+4. Diferenciamos entre el FRONTEND y BACKEND de la página web.

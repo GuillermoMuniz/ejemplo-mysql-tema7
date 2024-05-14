@@ -1,4 +1,4 @@
-const urlObtenerEmpleados = "http:/192.168.50.55/backend/conexionBBDD.php";
+const urlObtenerEmpleados = "http://192.168.50.55/backend/conexionBBDD.php";
 
 async function obtenerEmpleados(){
     try{
@@ -6,6 +6,7 @@ async function obtenerEmpleados(){
         const listaEmpleados = await fetch(urlObtenerEmpleados)
         .then(respuesta => respuesta.json())
 
+        console.log(listaEmpleados)
         console.log(respuesta)
     }catch(error){
         console.log(error)

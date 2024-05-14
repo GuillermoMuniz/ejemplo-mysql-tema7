@@ -31,7 +31,7 @@ if ($result->num_rows > 0) {
     }
     //Para json
     echo json_encode($data);
-
+    // var_dump($data);
 
 } else {
     echo "0 resultados";
